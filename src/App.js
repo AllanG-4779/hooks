@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react";
 import "./App.css";
 
 import Context1Review from "./components/Context/Context1Review";
+import UseCallback from "./components/useCallback/UseCallback";
 import Counter from "./components/UserReducer/counter";
 import Counter2 from "./components/UserReducer/Counter2";
 import FetchRevisit from "./components/UserReducer/FetchRevisit";
@@ -33,24 +34,9 @@ const reducer = (state, action) => {
 export const countContext = React.createContext(initialState)
 function App() {
   // const [render, toggleRender] = useState(true);
- const  [count, dispatch] = useReducer(reducer,initialState)
-  return (
+ return (
     <div className="App">
-      {/* {render && <UseEffectClean />} */}
-
-      {/* <button onClick={() => toggleRender(!render)}>Mount toggle</button>
-      <parentContext.Provider value="Hello from App">
-        <ComponentA />
-      </parentContext.Provider> */}
-      {/* <MultipleReducers/> */}
-      {/* <p>{count.counter}</p>
-      <countContext.Provider value = {{count:count, countDispatch: dispatch}}>
-        <ComponentA />
-        <ComponentB />
-        <ComponentC />
-      </countContext.Provider> */}
-      {/* <FetchRevisit/> */}
-      {/* <UserReducerFetch/> */}
+     <UseCallback/>
       
     </div>
   );
