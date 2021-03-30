@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "./Button";
 import Count from "./Count";
 import Title from "./Title";
 
 function UseCallback() {
   const [age, setAge] = useState(25);
-  const [salary, setSalary] = useState(4500);
-  const updatingAge = (item) => {
+  const [salary, setSalary] = useState(6799);
+  const updatingAge = useCallback((item) => {
     return setAge(age + item);
-  };
-  const updatingSal = (item) => {
-    return setSalary(salary + item);
-  };
+  },[age]);
+  const updatingSal = useCallback(
+    (item) => {
+      return setSalary(salary + item);
+    },
+    [salary]
+  );
   return (
     <div>
       <Title />
