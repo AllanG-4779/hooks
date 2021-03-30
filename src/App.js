@@ -18,6 +18,7 @@ import "./App.css";
 // import LifeCycle from "./components/LifeCycle";
 // import UseEffectClean from "./components/UseEffectClean";
 import UseMemo from "./components/UseMemo";
+import UseRef from "./components/UseRef";
 const initialState = {
   counter: 0,
 };
@@ -36,7 +37,7 @@ function App() {
   // const [render, toggleRender] = useState(true);
   return (
     <div className="App">
-      <UseMemo />
+    <UseRef/>
     </div>
   );
 }
